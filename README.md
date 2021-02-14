@@ -1,11 +1,4 @@
-# 1inch Governance Contracts
-
-[![Build Status](https://github.com/1inch-exchange/governance-contracts/workflows/CI/badge.svg)](https://github.com/1inch-exchange/governance-contracts/actions)
-[![Coverage Status](https://coveralls.io/repos/github/1inch-exchange/governance-contracts/badge.svg?branch=master)](https://coveralls.io/github/1inch-exchange/governance-contracts?branch=master)
-
-
-
-## Mainnet Contract Addresses
+## Contract
 
 [Governance Mothership](https://etherscan.io/address/0xA0446D8804611944F1B527eCD37d7dcbE442caba)
 
