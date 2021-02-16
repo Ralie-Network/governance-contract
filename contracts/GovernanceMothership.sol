@@ -18,20 +18,20 @@ contract GovernanceMothership is Ownable, BalanceAccounting {
     event AddModule(address indexed module);
     event RemoveModule(address indexed module);
 
-    IERC20 public immutable inchToken;
+    IERC20 public immutable RIEToken;
 
     EnumerableSet.AddressSet private _modules;
 
-    constructor(IERC20 _inchToken) public {
-        inchToken = _inchToken;
+    constructor(IERC20 _RIEToken) public {
+        RIEToken = _RIEToken;
     }
 
     function name() external pure returns(string memory) {
-        return "1INCH Token (Staked)";
+        return "RIE Token (Staked)";
     }
 
     function symbol() external pure returns(string memory) {
-        return "st1INCH";
+        return "stRIE";
     }
 
     function decimals() external pure returns(uint8) {
@@ -41,7 +41,7 @@ contract GovernanceMothership is Ownable, BalanceAccounting {
     function stake(uint256 amount) external {
         require(amount > 0, "Empty stake is not allowed");
 
-        inchToken.transferFrom(msg.sender, address(this), amount);
+        RIEToken.transferFrom(msg.sender, address(this), amount);
         _mint(msg.sender, amount);
         _notifyFor(msg.sender, balanceOf(msg.sender));
         emit Transfer(address(0), msg.sender, amount);
@@ -52,7 +52,7 @@ contract GovernanceMothership is Ownable, BalanceAccounting {
 
         _burn(msg.sender, amount);
         _notifyFor(msg.sender, balanceOf(msg.sender));
-        inchToken.transfer(msg.sender, amount);
+        RIEToken.transfer(msg.sender, amount);
         emit Transfer(msg.sender, address(0), amount);
     }
 
