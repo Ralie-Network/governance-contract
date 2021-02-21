@@ -1,14 +1,15 @@
 // SPDX-License-Identifier: MIT
 
-pragma solidity ^0.6.12;
+pragma solidity >=0.6.0 <0.8.0;
 
-import "@openzeppelin/contracts/access/Ownable.sol";
+import "../access/Ownable.sol";
 import "@openzeppelin/contracts/math/Math.sol";
 import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 import "./BalanceAccounting.sol";
 
 
 contract BaseRewards is Ownable, BalanceAccounting {
+    using SafeMath for uint256;
     event RewardAdded(uint256 reward);
     event RewardPaid(address indexed user, uint256 reward);
 
@@ -39,7 +40,7 @@ contract BaseRewards is Ownable, BalanceAccounting {
         _;
     }
 
-    constructor(IERC20 _gift) public {
+    constructor(IERC20 _gift) {
         gift = _gift;
     }
 

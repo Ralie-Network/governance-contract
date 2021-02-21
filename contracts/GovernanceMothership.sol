@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: MIT
 
-pragma solidity ^0.6.0;
+pragma solidity >=0.6.0 <0.8.0;
 
-import "@openzeppelin/contracts/access/Ownable.sol";
+import "./access/Ownable.sol";
 import "@openzeppelin/contracts/math/SafeMath.sol";
 import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 import "@openzeppelin/contracts/utils/EnumerableSet.sol";
@@ -22,7 +22,7 @@ contract GovernanceMothership is Ownable, BalanceAccounting {
 
     EnumerableSet.AddressSet private _modules;
 
-    constructor(IERC20 _RIEToken) public {
+    constructor(IERC20 _RIEToken) {
         RIEToken = _RIEToken;
     }
 

@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: MIT
 
-pragma solidity ^0.6.0;
+pragma solidity >=0.6.0 <0.8.0;
 
 import "../interfaces/IGovernanceModule.sol";
 
@@ -14,7 +14,7 @@ abstract contract BaseGovernanceModule is IGovernanceModule {
         _;
     }
 
-    constructor(address _mothership) public {
+    constructor(address _mothership) {
         mothership = _mothership;
     }
 
