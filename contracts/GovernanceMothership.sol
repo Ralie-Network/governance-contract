@@ -3,9 +3,9 @@
 pragma solidity >=0.6.0 <0.8.0;
 
 import "./Ownable.sol";
-import "@openzeppelin/contracts/math/SafeMath.sol";
-import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
-import "@openzeppelin/contracts/utils/EnumerableSet.sol";
+import "./SafeMath.sol";
+import "./IERC20.sol";
+import "./EnumerableSet.sol";
 import "./IGovernanceModule.sol";
 import "./BalanceAccounting.sol";
 

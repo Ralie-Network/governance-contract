@@ -3,8 +3,8 @@
 pragma solidity >=0.6.0 <0.8.0;
 
 import "./Ownable.sol";
-import "@openzeppelin/contracts/math/Math.sol";
-import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
+import "./Math.sol";
+import "./IERC20.sol";
 import "./BalanceAccounting.sol";
 
 
