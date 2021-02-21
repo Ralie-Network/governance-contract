@@ -2,7 +2,7 @@
 
 pragma solidity >=0.6.0 <0.8.0;
 
-import "../interfaces/IGovernanceModule.sol";
+import "./IGovernanceModule.sol";
 
 
 abstract contract BaseGovernanceModule is IGovernanceModule {

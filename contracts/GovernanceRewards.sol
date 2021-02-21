@@ -4,8 +4,8 @@ pragma solidity >=0.6.0 <0.8.0;
 
 import "@openzeppelin/contracts/math/SafeMath.sol";
 import "./BaseGovernanceModule.sol";
-import "../libraries/UniERC20.sol";
-import "../utils/BaseRewards.sol";
+import "./UniERC20.sol";
+import "./BaseRewards.sol";
 
 
 contract GovernanceRewards is BaseGovernanceModule, BaseRewards {

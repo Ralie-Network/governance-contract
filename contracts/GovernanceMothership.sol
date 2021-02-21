@@ -2,12 +2,12 @@
 
 pragma solidity >=0.6.0 <0.8.0;
 
-import "./access/Ownable.sol";
+import "./Ownable.sol";
 import "@openzeppelin/contracts/math/SafeMath.sol";
 import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 import "@openzeppelin/contracts/utils/EnumerableSet.sol";
-import "./interfaces/IGovernanceModule.sol";
-import "./utils/BalanceAccounting.sol";
+import "./IGovernanceModule.sol";
+import "./BalanceAccounting.sol";
 
 
 contract GovernanceMothership is Ownable, BalanceAccounting {
